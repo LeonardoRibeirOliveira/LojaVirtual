@@ -13,7 +13,7 @@ namespace LojaVirtual.ProductAPI.DTOs
         [Required(ErrorMessage = "Precisa ser fornecido um link para imagem.")]
         [MaxLength(255)]
         public string? ImagemURL { get; set; }
-
+        public string? NomeCategoria { get; set; }
         public CategoriaDTO? Categoria { get; set; } //Relaciona o produto à categoria por propriedade de navegação
         public int CategoriaId { get; set; }
     }

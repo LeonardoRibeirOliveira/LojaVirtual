@@ -36,23 +36,23 @@ namespace LojaVirtual.ProductAPI.Services
             return _mapper.Map<ProdutoDTO>(produtosEntity);
         }
 
-        public async Task<ProdutoDTO> GetProdutobyLessPrice(decimal preco)
-        {
-            var produtosEntity = await _produtoRepository.GetProdutobyLessPrice(preco);
-            return _mapper.Map<ProdutoDTO>(produtosEntity);
-        }
+        //public async Task<ProdutoDTO> GetProdutobyLessPrice(decimal preco)
+        //{
+        //    var produtosEntity = await _produtoRepository.GetProdutobyLessPrice(preco);
+        //    return _mapper.Map<ProdutoDTO>(produtosEntity);
+        //}
 
-        public async Task<ProdutoDTO> GetProdutobyPrice(decimal preco)
-        {
-            var produtosEntity = await _produtoRepository.GetProdutobyPrice(preco);
-            return _mapper.Map<ProdutoDTO>(produtosEntity);
-        }
+        //public async Task<ProdutoDTO> GetProdutobyPrice(decimal preco)
+        //{
+        //    var produtosEntity = await _produtoRepository.GetProdutobyPrice(preco);
+        //    return _mapper.Map<ProdutoDTO>(produtosEntity);
+        //}
 
-        public async Task<ProdutoDTO> GetProdutobyUpperPrice(decimal preco)
-        {
-            var produtosEntity = await _produtoRepository.GetProdutobyUpperPrice(preco);
-            return _mapper.Map<ProdutoDTO>(produtosEntity);
-        }
+        //public async Task<ProdutoDTO> GetProdutobyUpperPrice(decimal preco)
+        //{
+        //    var produtosEntity = await _produtoRepository.GetProdutobyUpperPrice(preco);
+        //    return _mapper.Map<ProdutoDTO>(produtosEntity);
+        //}
 
         public async Task RemoveProduto(int id)
         {

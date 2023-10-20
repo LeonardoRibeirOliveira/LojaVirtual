@@ -30,12 +30,12 @@ namespace LojaVirtual.ProductAPI.Repositories
 
         public async Task<IEnumerable<Produto>> GetAll()
         {
-            return await _context.Produtos.ToListAsync();
+            return await _context.Produtos.Include(c=> c.Categoria).ToListAsync();
         }
 
         public async Task<Produto> GetProdutobyId(int id)
         {
-            return await _context.Produtos.Where(c => c.Id == id).FirstOrDefaultAsync();
+            return await _context.Produtos.Include(c => c.Categoria).Where(c => c.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<Produto> GetProdutobyLessPrice(decimal preco)

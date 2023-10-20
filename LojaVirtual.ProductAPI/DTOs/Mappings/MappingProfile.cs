@@ -8,7 +8,7 @@ namespace LojaVirtual.ProductAPI.DTOs.Mappings
         public MappingProfile() 
         {
             CreateMap<Categoria, CategoriaDTO>().ReverseMap();
-            CreateMap<Produto, ProdutoDTO>().ReverseMap();
+            CreateMap<Produto, ProdutoDTO>().ForMember(x=> x.NomeCategoria, opt=> opt.MapFrom(src=> src.Categoria.Nome));
         }
     } 
 }
